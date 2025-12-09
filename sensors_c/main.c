@@ -9,7 +9,8 @@ typedef struct
     float data;
 } temp_sensor;
 
-struct humidity{
+struct humidity
+{
     /* data  = 8 bytes*/
     int id ;
     float data;
@@ -27,10 +28,10 @@ typedef struct {
     int id;
     char name;
     union sensor_head sensor;
-} sensor;           //__attribute(packed)__
+} sensor;     //(__attribute((Packed))__);
 
-int main(){
-
+int main()
+{
     //Array 
     int arr[100][100] = {0};
 
