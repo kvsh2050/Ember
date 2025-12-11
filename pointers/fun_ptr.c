@@ -45,3 +45,11 @@ int main(){
 
     return 0;
 }
+
+// for event driven library this funcptr is used
+
+//funct is a func pointer type 
+// funct func_lb is a function ptr 
+//funct func_arr is a function pointer array and we pass address of each function to that array 
+// we can even create a array of pointers to functions here !!
+// funct_lib[operation][a,b]
