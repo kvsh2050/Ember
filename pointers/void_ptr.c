@@ -15,8 +15,12 @@ int main(){
     printf("p value : %p, i address: %p \n", p, &i);
 
     int *pp = NULL;  // points to 0 ? and deref is not done usually here 
-    printf("pp value : %d, deref *pp value: %p \n", *pp, pp);
+    printf("pp value : %p, NULL value: %p \n", &pp , NULL);  // the null pointer fails in the systems with os 
 
 
     return 0;
 }
+
+//void pointer in practice
+// 1. kernel - user api uses void ptr and size of buffers, and kernel typecast on its own 
+// bootlin source code 
