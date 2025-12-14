@@ -39,3 +39,9 @@
 ## POINTERS TO POINTERS:
         - int * ptr = & i;
          int **pptr = &ptr ;            pptr  --> ptr --> i 
+
+
+---
+# ESH GOOGLE repo 
+# Free RTOS repo/ free rtos kernel 
+# fs.h linux repo 
