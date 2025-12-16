@@ -3,7 +3,11 @@
 int main(){
 
 
-
+    /*
+    example of ADT
+    1. stack
+    2. linked list 
+    */
 
     return 0;
 }

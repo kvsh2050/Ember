@@ -9,11 +9,15 @@
 2. Remove 
 3. Add
 4. Modify 
+5. Traverse
 
 - These have some computation complexity 
 
 
 ## DSA 
 1. Linked list
-2. stack 
-3. tree
+2. queue
+3. stack 
+4. tree
+5. graph
+6. hash 
