@@ -11,3 +11,9 @@
 4. Modify 
 
 - These have some computation complexity 
+
+
+## DSA 
+1. Linked list
+2. stack 
+3. tree

@@ -16,19 +16,18 @@ struct humidity
     float data;
 };
 
-union sensor_head
+typedef union sensor_head
 {
     /* data  = 8 bytes */
     temp_sensor temp ;
     struct humidity hum;
-};    //__attribute(Packed)__;
-
-typedef struct {
+}__attribute__((packed))uni;   
+typedef struct sensor{
     /* data  =  9 bytes*/
     int id;
     char name;
     union sensor_head sensor;
-} sensor;     //(__attribute((Packed))__);
+}__attribute__((packed)) sense ;    // correct syntax 
 
 int main()
 {
@@ -36,16 +35,16 @@ int main()
     int arr[100][100] = {0};
 
     //Initialize struct 
-    sensor sense;
+    struct sensor sense;
     temp_sensor t;
-    union sensor_head sh;
+    uni sh;
     //Accessing 
     sense.id = 0;
     //sense.name = "temperature";
     sense.sensor.temp.id = 0; 
     sense.sensor.temp.data = 23.3;
     printf("%f\n",sense.sensor.temp.data);
-    printf("size of sense struct : %ld\n", sizeof(sensor));
+    printf("size of sense struct : %ld\n", sizeof(struct sensor));
     // size of sense :
     //scanf(%c);
     return 0;
