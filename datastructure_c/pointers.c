@@ -33,12 +33,5 @@ int main(){
 
     printf("%lu\n", sizeof(pptr));
 
-
-
-
-
-
-
-
     return 0;
 }
