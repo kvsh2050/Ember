@@ -16,6 +16,8 @@ STACKS
 1. push()
 2. pop() : delete the data on top of stack 
 3. peek()
+4. traverse
+5. find(value insode stack)
 
 say 1-> 2->3->4 (4 is last)
 then pop 4->3->2->1
@@ -26,4 +28,9 @@ Organization of stacks of plates
 
 note:
 we have top or head point to top element : we push before head 
+
+stack :POINTERS:
+1. top pointer 
+2. last data is pointing to NULL 
+
 */
