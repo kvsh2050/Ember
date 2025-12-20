@@ -69,6 +69,8 @@ void add(int data){
 
 }
 
+//create new queue 
+
 /*
 EXPLORATION PATH IN TREE
 al, ar, bl, br, cl, (cr)->add here  (like queue)
@@ -81,4 +83,38 @@ NOTE: We only explore one node at a time
 NODE-BY-NODE Exploration 
 nodes added and consumed in a fashion of a queue!!!
 stacks and queues are helpful in graphs for traversing & bookkeeping
+
+
+simple:
+1 node once
+add node to explore at end of queue 
+read each one explore and remove it
 */
+
+//TRAVERSING THE TREE
+/*
+1. pre-order : root, left right 
+2. in order : 
+3. post order : 
+
+recursion is useful -> uses stack : fn call 
+
+stack:
+Pre-order: 
+In-order: H D B E A F C G 
+Post order: A D E F G C A
+
+queue:
+BFS : A B C D E F G H : level by level : queue
+DFS: left, left node fully , come back 
+
+also find and delete a node 
+*/
+
+void preorder(node_t *node){
+    if (node == NULL){
+        return;
+    }
+    preorder(node -> left_child);
+    preorder(node -> right_child);
+}
