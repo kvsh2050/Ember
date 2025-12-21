@@ -1,3 +1,5 @@
+//THIS IS A EXAMPLE CODE FOR TREE HAS INSTRUCTION, DONOT RUN THIS 
+
 /*
 TREE
 tree is a type of graph 

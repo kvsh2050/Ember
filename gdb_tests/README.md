@@ -22,6 +22,8 @@ gdb -q a.out
 11. takes in cmds from the host machine, where host machine has debugger set up and it passes commands to the hardware debugger
 12. the hardware debugger then cotrols cpu based on commands 
 
+
+## GDB COMMANDS
 gcc -g main.c
 gdb 
 gdb -q 
