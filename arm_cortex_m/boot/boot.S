@@ -1,12 +1,14 @@
-.section .vector
-vector_section:
-    .word 0xABCD
-    .word reset_exception_handler_address
-    .word 400 
+.section .vector 
+    .align 2
+    vector_table:
+        .word 0xABCD //stack top 
+        .word reset_handler 
+        .zero 128
+
 .section .text 
-    //directives 
-reset_exception_handler_address:
-    bl . 
-
-
-
+    .align 2
+    .type reset_handler, %function 
+    reset_handler:
+        mov r1, #10
+        b .
+    

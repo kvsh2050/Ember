@@ -1,10 +1,11 @@
 MEMORY {
-    MEM : org = 0x00 , l = 16k
+    ROM : org = 0x00 , l = 4k
 }
 
 SECTIONS {
     .text : {
         * (.vector)
         * (.text)
-    } > MEM
+    } > ROM
+
 }
