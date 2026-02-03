@@ -3,7 +3,6 @@
     vector_table:
         .word 0xABCD //stack top 
         .word reset_handler 
-        .zero 4
     //access systick exception
     .org 0x3C
         .word systick_handler
@@ -21,6 +20,7 @@
 
     reset_handler:
         mov r1, #10
+        mov pc, task1
         b .
 
     systick_handler:
@@ -28,6 +28,7 @@
         b .
 
     task1:
+        mov r3, #10
         b .
 
     task2:
@@ -40,7 +41,7 @@
         b .
 
 
-.section stack
+.section data
     .align 2 
     stack1:
         b .

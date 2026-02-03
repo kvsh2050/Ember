@@ -1,11 +1,19 @@
-MEMORY {
-    ROM : org = 0x00 , l = 4k
+MEMORY
+{
+    FLASH        (rx) : ORIGIN = 0x80000000, LENGTH = 64K
+    RAM          (rwx): ORIGIN = 0x20000000, LENGTH = 8K
+    SYS_ROM      (rx) : ORIGIN = 0x1FFF000,  LENGTH = 2K
 }
 
+
 SECTIONS {
-    .text : {
+    .vector : {
         * (.vector)
         * (.text)
-    } > ROM
+    } > FLASH
+
+    .data : {
+        * (.data)
+    } > RAM
 
 }

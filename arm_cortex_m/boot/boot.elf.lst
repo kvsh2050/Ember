@@ -1,0 +1,20 @@
+
+boot.o:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <reset_handler>:
+
+    .section .text 
+    .align 2
+    .type reset_handler, %function 
+reset_handler:
+        mov r1, #10
+   0:	210a      	movs	r1, #10
+        mov r2, #20
+   2:	2214      	movs	r2, #20
+        add r3 , r1, r2
+   4:	188b      	adds	r3, r1, r2
+        b .
+   6:	e7fe      	b.n	6 <reset_handler+0x6>
